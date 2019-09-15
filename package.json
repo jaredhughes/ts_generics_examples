@@ -6,8 +6,8 @@
   "author": "Jared Hughes <j@redhugh.es>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc src/index.ts",
-    "watch:debug": "nodemon --inspect=5858 -e ts,tsx --exec node -r ts-node/register ./src/index.ts"
+    "build": "tsc",
+    "start": "RUN_EXAMPLE=console nodemon --inspect=5858 -e ts,tsx --exec node -r ts-node/register ./src/index.ts"
   },
   "dependencies": {
     "@types/faker": "^4.1.5",

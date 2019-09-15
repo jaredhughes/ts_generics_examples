@@ -24,14 +24,22 @@
       "args": [
         "--watch",
         "src/**/*.ts",
-        "--ignore",
-        "src/**/*.spec.ts",
         "--exec",
         "${workspaceRoot}/node_modules/.bin/ts-node",
         "--inspect",
-        "src/app.ts"
+        "src/index.ts"
       ],
       "restart": true
+    },
+    {
+      "name": "Debugger Examples",
+      "type": "node",
+      "request": "launch",
+      "args": ["src/examples_debugger.ts"],
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+      "sourceMaps": true,
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector"
     }
   ]
 }
